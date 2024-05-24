@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            }
+
+            .captcha-container {
+                text-align: center;
+                border: 1px solid #ccc;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            button {
+                margin-top: 10px;
+                padding: 8px 16px;
+                cursor: pointer;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="captcha-container">
+        <h2>Captcha Challenge</h2>
+        <p id="captcha-text"></p>
+        <input type="text" id="user-input" placeholder="Enter Captcha">
+        <button onclick="checkCaptcha()">Submit</button>
+        <p id="result-message"></p>
+    </div>
+    <script>
+        // Function to generate a random alphanumeric string for the CAPTCHA
+            function generateCaptcha() {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                let captchaText = '';
+
+                for (let i = 0; i < 6; i++) {
+                    captchaText += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+
+                return captchaText;
+            }
+
+            // Function to initialize the CAPTCHA challenge
+            function initCaptcha() {
+                const captchaText = generateCaptcha();
+                document.getElementById('captcha-text').textContent = captchaText;
+            }
+
+            // Function to check if the entered text matches the CAPTCHA
+            function checkCaptcha() {
+                const captchaText = document.getElementById('captcha-text').textContent;
+                const userInput = document.getElementById('user-input').value;
+                const resultMessage = document.getElementById('result-message');
+
+                if (userInput === captchaText) {
+                    resultMessage.textContent = 'Success! CAPTCHA is correct.';
+                    resultMessage.style.color = 'green';
+                } else {
+                    resultMessage.textContent = 'Incorrect CAPTCHA. Please try again.';
+                    resultMessage.style.color = 'red';
+                    initCaptcha(); // Refresh CAPTCHA on incorrect attempts
+                }
+            }
+
+            // Initialize CAPTCHA on page load
+            initCaptcha();
+
+    </script>
+</body>
+</html>

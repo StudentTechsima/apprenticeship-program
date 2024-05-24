@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="demo()">
+    <input type="checkbox" id="check" checked >
+    <script>
+        function demo(){
+            var c=document.getElementById("check");
+            if(c.checked==true){
+                c.checked=false;
+            }
+            else{
+                c.checked=true;
+            }
+        }  
+
+    </script>
+</body>
+</html>

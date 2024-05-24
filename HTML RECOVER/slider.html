@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   !
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #main{
+                height: 500px;
+                width:1000px;
+                margin: 0px auto;
+                border: 5px solid gray;
+            }
+            #fpic{
+                height:100%;
+                width:100%;
+            }
+            #box{
+                height:200px;
+                width:350px;
+                border:5px solid gray;
+                float:left;
+            }
+            #spic{
+                height: 100%;
+                width:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <img src="images/s1.jpg" id="fpic" alt="">
+        </div>
+        <div id="box" onclick="f1(this)"><img src="images/s1.jpg" id="spic"/></div>
+        <div id="box" onclick="f1(this)"><img src="images/s2.jpg" id="spic"/></div>
+        <div id="box" onclick="f1(this)"><img src="images/s3.jpg" id="spic"/></div>
+        <div id="box" onclick="f1(this)"><img src="images/ss.jpg" id="spic"/></div>
+    </body>
+    
+    <script>
+    function f1(x)
+    {
+        var img=document.getElementById('main').innerHTML;
+        document.getElementById('main').innerHTML=x.innerHTML;
+        x.innerHTML=img;
+    
+    }
+    </script>
+    </html>

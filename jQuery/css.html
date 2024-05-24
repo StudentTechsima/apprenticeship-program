@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS function</title>
+    <style>
+        #style{
+            height:100px;
+            width:100px;
+            border:2px solid #000;
+            position: relative;
+            left:0;
+        }
+    </style>
+  </head>
+  <body>
+      <div id="style"></div> 
+      <script src="js/jquery.js"></script>
+      <script>
+          $(document).ready(function(){
+            $("#style").click(function(){
+                $(this).animate({left:'250px'},function(){
+                    $(this).css({"background":"red","borderRadius":"30px","border":"10px inset purple"})
+                })
+               
+            })
+          }); 
+      </script>
+  </body>
+</html>

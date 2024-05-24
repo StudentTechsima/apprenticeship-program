@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Menu Using  Class & Element Selector</title>
+		<style>
+			ul{
+				list-style-type:none;
+			}
+			
+			li{
+				display:inline-block;
+				padding:20px;
+				position:relative;
+			}
+			
+			li::after{
+				content:"";
+				height:3px;
+				width:50%;
+				background:red;
+				position:absolute;
+				top:70%;
+				left:25%;
+				transform:scale(0);
+				transition:transform.5s;
+				transform-origin:right;
+				
+			}
+			li:hover::after{
+				transform:scale(1);
+				transform-origin:left;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>Home</li>
+			<li>About</li>
+			<li>Contact</li>
+			<li>Login</li>
+			<li>Gallery</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Layout</title>
+		<style>
+			.outer{
+				height:400px;
+				width:400px;
+				border:2px solid #000;
+				margin:0px auto;
+			}
+			
+			.inner{
+				height:200px;
+				width:400px;
+				background:#ff0000;
+			}
+			.back{
+				background:#00ffff;
+			}
+			
+			.left{
+				height:200px;
+				width:200px;
+				background:#0000ff;
+				float:left;
+			}
+			.mult{
+				height:0px;
+				width:0px;
+				border-top:100px solid #f00;
+				border-left:100px solid #f00;
+				border-right:100px solid #ccc;
+				border-bottom:100px solid #ccc;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="outer">
+			<div class="inner">
+				<div class="left"></div>
+				<div class="left">
+					<div class="mult"></div>
+				</div>
+			</div>
+			<div class="inner back">
+				<div class="left">
+					<div class="mult"></div>
+				</div>
+				<div class="left"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&family=Fredoka:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka";
+}
+
+.top-header {
+  min-height: 50px;
+  width: 100%;
+  background: #ffd40d;
+  font-family: "Fredoka";
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.top-header .contact {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .top-header .contact .contact {
+    width: 100% !important;
+  }
+}
+.top-header .contact .mobile-icon {
+  background: #f3264c;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+.top-header .contact .contact-content {
+  padding-left: 10px;
+}
+.top-header .social {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+.top-header .social a {
+  color: #000000;
+  text-align: center;
+}
+.top-header .login {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-header .login .contact-content {
+  padding-left: 10px;
+}
+
+@media (max-width: 900px) {
+  .top-header {
+    flex-direction: column;
+  }
+  .top-header .contact {
+    width: 100%;
+  }
+  .top-header .social {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .top-header .login {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

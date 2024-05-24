@@ -1,0 +1,62 @@
+DDL:(DATA DEFINITION LANGUAGE)
+   CREATE:   
+           CREATE DATABASE db_name;
+		   CREATE TABLE tbl_name(column1 datatype, column12 datatype);
+   DROP: 
+             DROP TABLE tbl_name;
+   TRUNCATE: ggg
+             TRUNCATE TABLE tbl_name;   
+   ALTER: 
+   
+         ALTER TABLE tbl_name ADD column_name datatype;
+		 ALTER TABLE tbl_name DROP COLUMN column_name;
+		 ALTER TABLE tbl_name MODIFY/CHANGE column_name new_datatype;
+		 ALTER TABLE tbl_name MODIFY/CHANGE column_name datatype NOT NULL/PRIMARY KEY/UNIQUE/AUTO_INCREMENT;
+   
+   RENAME:
+         RENAME old_tbl_name TO new_table_name;   
+DML: 
+    INSERT:
+	       INSERT INTO tbl_name(column1, column2)VALUES(value1, value2);
+	UPDATE: 
+	        UPDATE table_name SET column_name=new_value WHERE condition;
+
+	DELETE:
+	           DELETE FROM tbl_name;   // delete entire tuples from the relation
+               DELETE FROM tbl_name where id=4;	
+    
+DCL
+TCL:  COMMIT and ROLLBACK(only used on DML(insert,update, delete))
+DQL:
+   SELECT: 
+        SELECT column1, column2 FROM tbl_name;
+		SELECT * FROM tbl_name;
+
+
+
+INDEX: MAKE THE SELECT QUERY FASTER;
+
+VIEW: VIRTUAL TABLE not Actual Table.
+      Does not occupy memory space
+       contain row and coulmns and looks like a table but it is not a table.
+      It is stored query.	   
+	      
+		                  AGGREGATE FUNCTIONS
+						  
+						    COUNT()
+							SUM()
+							MIN()
+							MAX()
+							AVG()
+							
+							
+					     SQL CLAUSES	
+                         
+						 WHERE:
+						    SELECT column FROM tbl_name where column_name;
+							
+                         GROUP BY:
+						    
+                         HAVING:
+						 condition with group by;
+                         ORDER BY:						 

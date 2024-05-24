@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            height:300px;
+            width:300px;
+            background-color: aquamarine;
+        }
+        button{
+            padding:  20px 40px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div"> </div><br>
+    <button id="btn1">Hide</button>
+    <button id="btn2">show</button>
+    <button id="btn3">toggle</button>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".div").hide("fast")
+            });
+            $("#btn2").click(function(){
+                $(".div").show("fast")
+            });
+            $("#btn3").click(function(){
+                $(".div").toggle(1000)
+            });
+        });
+
+    </script>
+</body>
+</html>

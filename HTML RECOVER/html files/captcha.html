@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{  
+            height:100vh; 
+            width:100vw;        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+        .captcha{
+            height:80vmin;
+            width:80vmin;
+            background: rgb(244, 243, 243);
+            padding: 5vmin;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2vmin;
+            flex-direction: column;
+        }
+        h1{
+            font-size: 6vmin;
+            color: #15d183;
+            margin-bottom:4vmin;
+        }
+        label{
+            font-size: 3vmin;
+            color: #0a7146;
+        }
+        input{
+            width:100%;
+            height:7vmin;
+            margin: 1vmin 0vmin;
+        }
+        input[type="submit"]{
+            background-color: aquamarine;
+            color:#0a7146;
+            outline: none;
+            border:none;
+            font-size: 4vmin;
+            width:40%;
+            height:8vmin;
+            border-radius: 2vmin;
+        }
+        .cpt{
+            padding: 3vmin;
+            position: relative;
+        }
+        .cpt span{
+            font-style: italic;
+            text-decoration: line-through;
+            font-size:5vmin;
+            
+        }              
+        #pwd{
+            position: relative;
+        }
+        .cpt img{
+            height:7vmin;
+            width:7vmin;
+            position: absolute;
+            top:20%;
+            right:10%;
+        } 
+        #eye{
+            height:6.5vmin;
+            width:6.5vmin;
+            position: absolute;
+            top:45%;
+            right:35%;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="captcha">
+        <h1>Login Form</h1>
+        <form  method="post" enctype="multipart/form-data">
+            <label>User Name</label>
+            <input type="text" name="name" id="name">
+            <label>Password</label>
+            <input type="text" name="pwd" id="pwd">
+            <img id="eye" src="../images/eye.png">
+            <div class="cpt"><span id="cptMatch">ABSDSD</span> <img onclick="refresh()" src="../images/refresh.png"></div>
+            <input type="text" id="cpt-enter" name="captcha">
+            <input type="submit"  onclick="checkcaptcha()" value="Send">
+        </form>
+    </div>  
+    <script>
+        function captcha(){
+            const c='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz0123456789' ;
+            let  charText="";
+            for(i=0;i<6; i++){
+                charText+=c.charAt(Math.floor(Math.random()*c.length));
+            }
+            document.getElementById("cptMatch").textContent=charText;
+        } 
+        captcha();
+        function refresh(){
+            captcha();
+            document.getElementById("cpt-enter").value="";
+        }
+        function checkcaptcha(){
+            
+        }
+    </script> 
+  </body>
+</html>

@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <select onchange="demo()" id="sel">
+        <option >HTML</option>
+        <option >CSS</option>
+        <option >JS</option>
+   </select> 
+   <div id="show"></div>
+   <script>
+        function demo(){
+            var x=document.getElementById("sel").value;
+            document.getElementById("show").innerText=x;
+        }
+   </script>
+</body>
+</html>

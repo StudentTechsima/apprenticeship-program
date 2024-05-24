@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>			Opacity Prop		</title>
+		<style>
+			div{
+			height:500px;
+			width:500px;
+			background:#000;
+			opacity:0.8;
+			}
+			.kamalgayab{
+				height:500px;
+				width:700px;
+				border-radius:50%;
+				background-image:linear-gradient(red,white, green, blue, yellow);
+				background-image:repeating-linear-gradient(yellow 10% , red 20% , green 40%)
+			}
+			.kamalgayab:hover{
+				border-radius:50%;
+				background:linear-gradient(to right, red,white, green, blue, yellow );
+				background:linear-gradient(-20deg, red,white, green, blue, yellow );
+				background:linear-gradient(-20deg,  white 10%, yellow 20% );
+				background:radial-gradient(circle, red, yellow, pink);
+				background:repeating-radial-gradient(white 10%, yellow 20%);
+				background:conic-gradient(from 45deg ,green, yellow);
+				background:conic-gradient(at 35% 65% ,green,red , white , blue, teal ,aqua, yellow);
+				background: repeating-conic-gradient( green 10% , yellow 20%)
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div ></div>
+		<div class="kamalgayab"></div>
+	</body>
+</html>

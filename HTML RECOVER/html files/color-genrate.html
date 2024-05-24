@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        #colorInput {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Color Changer</h1>
+    
+    <label for="colorInput">Choose a color:</label>
+    <input type="color" id="colorInput" value="#3498db">
+
+    <br>
+
+    <label for="widthInput">Choose a width:</label>
+    <input type="range" id="widthInput" min="50" max="100" value="100">
+
+    <script>
+        const colorInput = document.getElementById('colorInput');
+        const widthInput = document.getElementById('widthInput');
+
+        colorInput.addEventListener('input', updateBackgroundColor);
+        widthInput.addEventListener('input', updateWidth);
+
+        function updateBackgroundColor() {
+            document.body.style.backgroundColor = colorInput.value;
+        }
+
+        function updateWidth() {
+            document.body.style.width = widthInput.value + '%';
+        }
+    </script>
+</body>
+</html>

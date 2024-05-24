@@ -1,0 +1,19 @@
+<html>
+	<head></head>
+	<body>
+		<select onchange="demo()" id="select">
+			<option>CSS</option>
+			<option>JS</option>
+			<option>SASS</option>
+			<option>Python</option>
+		</select>
+		<p id="para"></p>
+		<script>
+			function demo(){
+			let changeValue=document.getElementById("select").value;
+			
+			document.getElementById("para").innerText=changeValue;
+			}
+		</script>
+	</body>
+</html>

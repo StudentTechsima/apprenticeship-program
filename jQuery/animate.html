@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #animate{
+            height:100px;
+            width:100px;
+            background-color: aqua;
+            position: relative;
+            left:0;
+            border-width:10px;
+            border-color:red;
+            border-style:dotted;
+        }
+    </style>
+</head>
+<body>
+    <div id="animate">Techsima</div>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#animate").click(function(){
+                $(this).animate(
+                    {left:'250px',
+                        height:'300px',
+                        width:'300px',
+                        borderRadius:'20px',
+                        borderWidth:'110px'
+                    }
+                )
+            })
+        });
+    </script> 
+</body>
+</html>

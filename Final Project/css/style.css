@@ -1,0 +1,105 @@
+.topHeader{
+    min-height:40px;
+    background-color: #EEF5FF;
+    
+}
+
+.header{
+    min-height:90px;
+    background-color: #86B6F6;
+}
+.header .hedaer-navbar{
+    min-height:90px;
+}
+.nav-item .nav-link{
+    color:#fff;
+}
+.nav-item .nav-link:hover {
+    color: #176B87;
+}
+
+.logo{
+    height:70px;
+    width:150px;
+}
+
+.logo img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.carousel-item{
+    height:450px;
+}
+
+.carousel-item img{
+    height:100%;
+    width:100%;
+    object-fit: fill;
+}
+
+.about-image{
+    min-height:300px;
+}
+.about-image img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.service-image{
+    height:250px;
+    margin-top: 20px;
+}
+.service-image img{
+    height:100%;
+    width:100%;
+    object-fit:fill;
+}
+.enquiry{
+    background-color: #fff;
+    padding: 40px;
+   
+}
+.enquiry-image{
+    height:400px;    
+    padding: 10px;
+} 
+.enquiry-image img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+.enquiry-form{
+    padding: 10px;
+}
+.enquiry-form .form-control{
+    border-left:0px;
+    border-right:0px;
+    border-top:0px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+.enquiry-form label{
+    color:blue;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0px 0px 10px 0px ;
+}
+.enquiry-form .form-control:focus {
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+.footer{
+    background-color: #86B6F6;
+    padding-top: 40px;
+}
+.footer-line{
+    height:1px;
+    width:100%;
+    background-color: #fff;
+}

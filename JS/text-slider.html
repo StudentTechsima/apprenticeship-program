@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<style>
+			div{
+				height:300px;
+				width:400px;
+				margin:10em auto;
+				border:2px solid #000;
+				text-align:center;
+				line-height:300px;
+				font-size:3em;
+							
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>		
+		<script>
+			
+			let pro=["HTML","CSS","JS","BOOTSTRAP","PHP","GO"];
+			let color=["teal","red","yellow", "green","navy","pink"];
+			let i=0;
+			function demo(){
+				let get=document.getElementById("box");
+				get.innerText=pro[i];
+				get.style.color=color[i];
+				i++;
+				if(i==pro.length){
+					i=0;
+				}
+			}
+			window.setInterval(demo,1000);
+			
+			
+			
+				
+		</script>
+	</body>
+</html>

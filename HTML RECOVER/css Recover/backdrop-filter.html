@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Underline Position</title>
+  <style>
+    #container{
+    	width: 600px;
+    	height: 600px;
+    	border: 1px solid #000;
+    	background: url(https://source.unsplash.com/user/erondu/1600x900) no-repeat;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    }
+    #inner{
+    	color: #fff;
+    	text-align: center;
+		width: 400px;
+		height: 250px;
+		border: 2px solid #fff;
+		border-radius: 5px;
+		backdrop-filter: blur(4px) saturate(70%);
+		/*transition: backdrop-filter .4s;*/
+    }
+
+    #inner:hover{
+     	 backdrop-filter: contrast(200%);	
+     }  </style>
+</head>
+<body>
+ 	<div id="container">
+ 		<div id="inner">
+ 			<h1>Yahoo Baba</h1>
+ 		</div>
+ 	</div>
+</body>
+</html>

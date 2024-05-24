@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Relative And Absolute</title>
+		<style>
+			.image{
+				min-height:400px;
+				width:100%;
+				position:relative;
+			}			
+			.image img{
+				height:100%;
+				width:100%;
+				object-fit:fill;
+			}
+			
+			.image h1{
+				position:absolute;
+				top:40%;
+				left:30%;
+				color:#fff;
+			}
+			
+			.image h2{
+				position:absolute;
+				top:50%;
+				left:30%;
+				color:#fff;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="image">
+			<img src="images/s1.jpg" alt="position image">
+			<h1>Code Your Way Up To The Peak.</h1>
+			<h2>Code Your Way Up To The Peak.</h2>
+			
+		</div>
+	</body>
+</html>

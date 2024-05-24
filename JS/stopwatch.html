@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop watch</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        h1{
+            font-size: 40px;
+            font-weight: bold;
+            word-spacing: 1px;
+            text-align: center;
+        }
+        section{
+            height:270px;
+            width:600px;
+            margin: 50px auto;
+            border:10px solid rgba(0, 0, 0, 0.962);
+            background-color: rgba(0, 0, 0, 0.892);
+           
+        }
+        .time{
+            height:200px;
+            width:100%;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+        .box{
+            height:100px;
+            width: 150px;
+            border-radius: 30px;
+            background-color: #fff;
+            font-size: 70px;
+            font-weight: bold;
+            word-spacing: 2px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .btn{
+            height:70px;
+            width:100%;
+            display: flex;
+            justify-content:space-around;
+            
+            align-items: start;
+        }
+        button{
+            background-color: #fff;
+            font-size: 22px;
+            padding: 0px 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Stop watch</h1>
+    <section>
+        <div class="time">
+        <div class="box" id="h">00</div>
+        <div class="box" id="m">00</div>
+        <div class="box" id="s">00</div>
+        <div class="box" id="ms">00</div>
+        </div>
+        <div class="btn">
+            <button type="submit" onclick="start()"> Start</button>
+            <button type="submit" onclick="stop()"> Stop</button>
+            <button type="submit" onclick="reset()"> Reset</button>
+        </div>
+    </section>
+    <script>
+       
+        var hours=0;
+        var mint=0;
+        var sec=0;
+        var milisec=0;
+        function stopWatch(){
+            var hh=document.querySelector("#h");
+            var mm=document.querySelector("#m");
+            var ss=document.querySelector("#s");
+            var mmss=document.querySelector("#ms");
+            milisec++;
+            if(milisec==100){
+                sec++;
+                milisec=0;
+                if(sec==60){
+                    mint++;
+                    sec=0;
+                    if(mint==60){
+                        hours++;
+                        mint=0;
+                    }
+                }
+            }
+            mmss.innerText=milisec;
+            ss.innerText=sec;
+            mm.innerText=mint;
+            hh.innerText=hours;
+        }
+        function start(){
+        hold= window.setInterval(stopWatch,10);
+        }
+
+        function stop() {
+            window.clearInterval(hold);
+        }
+
+        function reset(){
+            window.location.href="stopwatch.html";
+        }
+        
+       
+    </script>
+</body>
+</html>

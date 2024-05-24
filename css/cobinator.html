@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>CSS Combinator</title>
+		<style>
+			/* Descendent Selector*/
+			.outer .para{
+				color:#ff0;
+			}
+			
+			/* Child Selector*/
+			
+			.outer > p{
+				color:#00f;
+			}
+			
+			
+			/* adjacent sibling selector*/
+			.outer + p{
+				color:#f00;
+			}
+			
+			/*genral sibling selector */
+			.outer ~ p{
+				color:#008000;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<P>Techsima Solution Pvt Ltd 1</p>
+		<div class="outer">
+			<P class="para">Techsima Solution Pvt Ltd 2</p>
+			<P>Techsima Solution Pvt Ltd 3</p>
+			<P>Techsima Solution Pvt Ltd 4</p>
+			<P>Techsima Solution Pvt Ltd 5</p>
+		</div>
+		<P class="para">Techsima Solution Pvt Ltd 15</p>
+		<P class="para">Techsima Solution Pvt Ltd 15</p>
+		<P class="para">Techsima Solution Pvt Ltd 15</p>
+		<P class="para">Techsima Solution Pvt Ltd 15</p>
+		<P class="para">Techsima Solution Pvt Ltd 15</p>
+		<div class="outer">
+			<P class="para">Techsima Solution Pvt Ltd 6</p>
+			<P>Techsima Solution Pvt Ltd 7</p>
+			<P>Techsima Solution Pvt Ltd 8</p>
+			<P>Techsima Solution Pvt Ltd 9</p>
+		</div>
+		<P>Techsima Solution Pvt Ltd 10</p>
+		<P class="para">Techsima Solution Pvt Ltd 11</p>
+		<P>Techsima Solution Pvt Ltd 12</p>
+		<P>Techsima Solution Pvt Ltd 13</p>
+		<P class="para">Techsima Solution Pvt Ltd 14</p>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>Media Query</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			:root{
+				--primary-color:#008000;
+				--primary-background:#f1f1f1;
+				--normal-padding:.8em;
+			}
+			*{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+			}
+			.container{
+				width:100%;
+				display:flex;
+				gap:5px;
+				flex-wrap:wrap;
+				justify-content:center;
+			}
+			.card{
+				min-height:100px;
+				width:24%;
+				background:var(--primary-background);
+				overflow:hidden;
+				color:var(--primary-color);
+				padding:var(--normal-padding);
+				
+			}
+			
+			.card2, .card4{
+				background:green;
+			}
+			
+			@media screen and (max-width:1024px){
+				
+				.card{
+					width:49%;
+					background:yellow;
+					font-size:1.6em;
+					padding:1.2em;
+				}
+			}
+			
+			@media screen and (max-width:576px){
+				
+				.card{
+					width:100%;
+					background:yellow;
+					font-size:1em;
+					font-weight:900;
+					padding:.6em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="card card1">
+				Lorem Ipsum छपाई और अक्षर योजन उद्योग का एक साधारण डमी पाठ है. Lorem Ipsum सन १५०० के बाद से अभी तक इस उद्योग का मानक डमी पाठ मन गया, जब एक अज्ञात मुद्रक ने नमूना लेकर एक नमूना किताब बनाई. यह न केवल पाँच सदियों से जीवित रहा बल्कि इसने इलेक्ट्रॉनिक मीडिया में छलांग लगाने के बाद भी मूलतः अपरिवर्तित रहा. यह 1960 के दशक में Letraset Lorem Ipsum अंश युक्त पत्र के रिलीज के साथ लोकप्रिय हुआ, और हाल ही में Aldus PageMaker Lorem Ipsum के संस्करणों सहित तरह डेस्कटॉप प्रकाशन सॉफ्टवेयर के साथ अधिक प्रचलित हुआ.
+			</div>
+			<div class="card card2">
+				Lorem Ipsum छपाई और अक्षर योजन उद्योग का एक साधारण डमी पाठ है. Lorem Ipsum सन १५०० के बाद से अभी तक इस उद्योग का मानक डमी पाठ मन गया, जब एक अज्ञात मुद्रक ने नमूना लेकर एक नमूना किताब बनाई. यह न केवल पाँच सदियों से जीवित रहा बल्कि इसने इलेक्ट्रॉनिक मीडिया में छलांग लगाने के बाद भी मूलतः अपरिवर्तित रहा. यह 1960 के दशक में Letraset Lorem Ipsum अंश युक्त पत्र के रिलीज के साथ लोकप्रिय हुआ, और हाल ही में Aldus PageMaker Lorem Ipsum के संस्करणों सहित तरह डेस्कटॉप प्रकाशन सॉफ्टवेयर के साथ अधिक प्रचलित हुआ.
+			</div>
+			<div class="card card3">
+				Lorem Ipsum छपाई और अक्षर योजन उद्योग का एक साधारण डमी पाठ है. Lorem Ipsum सन १५०० के बाद से अभी तक इस उद्योग का मानक डमी पाठ मन गया, जब एक अज्ञात मुद्रक ने नमूना लेकर एक नमूना किताब बनाई. यह न केवल पाँच सदियों से जीवित रहा बल्कि इसने इलेक्ट्रॉनिक मीडिया में छलांग लगाने के बाद भी मूलतः अपरिवर्तित रहा. यह 1960 के दशक में Letraset Lorem Ipsum अंश युक्त पत्र के रिलीज के साथ लोकप्रिय हुआ, और हाल ही में Aldus PageMaker Lorem Ipsum के संस्करणों सहित तरह डेस्कटॉप प्रकाशन सॉफ्टवेयर के साथ अधिक प्रचलित हुआ.
+			</div>
+			<div class="card card4">
+				Lorem Ipsum छपाई और अक्षर योजन उद्योग का एक साधारण डमी पाठ है. Lorem Ipsum सन १५०० के बाद से अभी तक इस उद्योग का मानक डमी पाठ मन गया, जब एक अज्ञात मुद्रक ने नमूना लेकर एक नमूना किताब बनाई. यह न केवल पाँच सदियों से जीवित रहा बल्कि इसने इलेक्ट्रॉनिक मीडिया में छलांग लगाने के बाद भी मूलतः अपरिवर्तित रहा. यह 1960 के दशक में Letraset Lorem Ipsum अंश युक्त पत्र के रिलीज के साथ लोकप्रिय हुआ, और हाल ही में Aldus PageMaker Lorem Ipsum के संस्करणों सहित तरह डेस्कटॉप प्रकाशन सॉफ्टवेयर के साथ अधिक प्रचलित हुआ.
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <button onclick="demo()">CLick Me</button>
+    <script>
+        function demo(){
+            let arr=["HTML", "CSS", "JAVASCRIPT"];
+            let c=["red", "green", "pink"];
+            let res="<ul>";
+                for(let i=0; i<arr.length; i++){
+                    res=res+"<li style='background:"+c[i]+";color:"+c[i+1]+";'>"+arr[i]+"</li>";
+                }
+                
+            res=res+"</ul>";
+            document.getElementById("p1").innerHTML=res;
+        }
+    </script>
+</body>
+</html>

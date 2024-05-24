@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #im1{
+            height:120px;
+            width:120px;
+            border:10px solid orange;
+        }
+        #imgb{
+            height: 300px;
+            width:900px;
+            border: 10px solid orangered;
+
+        }
+
+        #modal{
+            width:100%;
+            height:100%;
+            position: fixed;
+            top:0;
+            background-color:rgb(111, 0, 255);
+            display:none;
+        }
+        #inner{
+            height:500px;
+            width:600px;
+            background-color: beige;
+            border:10px solid orangered;
+            margin:0px auto;
+            padding: 25px;
+        }
+        #inner:hover{
+            transform: rotate(360deg);
+            transition: all easw 2s;
+        }
+        #inner img{
+            height:93%;
+            width: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/alcohal-2.webp" id="im1" onclick="zoom(this)" >
+        <img src="images/alcohal-2.webp" id="im1" onclick="zoom(this)" >
+        <img src="images/alcohal-2.webp" id="im1" onclick="zoom(this)" >        
+        <img src="images/alcohal-2.webp" id="im1" onclick="zoom(this)" >
+    </div>   
+    <div id="modal">
+        <div id="inner">
+            <h1>Image Modal<a href="modal.html">Repage</a></h1>  
+            <img src="images/alcohal-6.webp" id="imgz">     
+    </div>
+    </div>
+    <script>
+        
+        function zoom(y){
+            var m=document.querySelector("#modal")
+            m.style.display="block";
+            document.querySelector("#imgz").src=y.src;
+        }
+    </script>
+</body>
+</html>

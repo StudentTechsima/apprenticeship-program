@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1=0, num2=1,next_term,i;
+        var input=Number(prompt('Enter Your number:'));
+        for(i=1; i<=input; i++){
+            document.write(num1+"<br>");
+            next_term=num1+num2;
+            num1=num2;
+            num2=next_term;
+        }
+    </script>
+</body>
+</html>

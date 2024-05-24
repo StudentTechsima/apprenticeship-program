@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>title</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .container .column{
+            height:200px;
+            width:200px;
+            border:10px solid #ff0;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 14px rgb(9, 9, 9) inset;
+        }
+        .column img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+            filter: blur(2px);
+            transition: all ease-in .5s;
+        }
+
+        .column img:hover{
+            filter:blur(0px);
+        }
+        .box{
+            position: relative;
+            display: none;
+            height:400px;
+            width:500px;
+            border:2px solid #ff0;
+            transform: all ease 2s ;
+
+        }
+        .box:hover{
+            transform: scale(1.4);
+        }
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="column">
+            <img src="images/1.jpg" alt="Show" onclick="demo(this);"/>
+        </div>
+        <div class="column">
+            <img src="images/2.jpg" alt="Show" onclick="demo(this);"/>
+        </div>
+        <div class="column">
+            <img src="images/3.jpg" alt="Show" onclick="demo(this);"/>
+        </div>
+        <div class="column">
+            <img src="images/4.jpg" alt="Show" onclick="demo(this);"/>
+        </div>
+    </div>
+    <div class="box">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+    </div>
+    <script>
+        function demo(im){
+            var expimg=document.getElementById("expandedImg");
+            var imgText=document.getElementById("imgtext");
+            expimg.src=im.src;
+            imgText.innerHTML=im.alt;
+            expimg.parentElement.style.display="block";
+        }
+    </script>
+  </body>
+</html>

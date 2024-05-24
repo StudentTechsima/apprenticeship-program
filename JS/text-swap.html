@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<style>
+			h1{
+				border:2px solid red;				
+				padding:10px;
+				box-shadow:0px 0px 20px 2px #000 inset;
+				text-align:center;
+				color:crimson;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="h1">Techsima <mark>Solution</mark> Pvt Ltd</h1>
+		<h1 id="h2">Techsima Solution Pvt Ltd in Ayodhya</h1>
+		<button onclick="demo()">Text Swap</button>
+		<script>
+			function demo(){
+			var heading1=document.getElementById("h1");
+			var heading2=document.getElementById("h2");
+			var hed1=heading1.innerText;
+			var hed2=heading2.innerText;
+			heading1.innerText=hed2;
+			heading2.innerText=hed1;
+			}
+		</script>
+	</body>
+</html>

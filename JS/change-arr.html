@@ -1,0 +1,30 @@
+<html>
+	<head></head>
+	<body>
+		<select onchange="demo()" id="select">
+			<option>HTML</option>
+			<option>Python</option>
+			<option>Ruby</option>
+			<option>SASS</option>
+		</select>
+		
+		<p id="p"></p>
+		
+		<script>		
+			function demo(){
+				var s=document.getElementById("select").value;
+				document.getElementById("p").innerText=s;
+			}
+		</script>
+	</body>
+</html>
+function start(){
+	var  x=window.setInterval("stopWatch()",1000);
+	}
+	function stop(){
+	  window.clearInterval(x);
+	}
+
+	function reset(){
+		window.location.href="stopwatch.html";
+	}

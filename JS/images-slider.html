@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<style>
+			div{
+				height:300px;
+				width:400px;
+				margin:10em auto;
+				border:2px solid #000;
+				text-align:center;
+				line-height:300px;
+				font-size:3em;
+							
+			}
+			
+			img{
+				height:100%;
+				width:100%;
+				object-fit:contain;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="images/alcohal-2.webp" id="img">
+		</div>		
+		<script>
+			
+			let slider=["images/alcohal-2.webp","images/alcohal-3.webp","images/alcohal-4.webp","images/alcohal-5.webp"];
+			let i=0;
+			function demo(){
+				let im=document.getElementById("img");
+				im.src=slider[i];				
+				i++;
+				if(i==slider.length){
+					i=0;
+				}
+			}
+			window.setInterval(demo,1000);				
+		</script>
+	</body>
+</html>
+document.write(`This current date is: ${d.getDate()} -  ${(d.getMonth()+1)}- ${d.getFullYear()}`);

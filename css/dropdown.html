@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Dropdown Menu</title>
+		<style>
+		*{
+			margin:0px;
+			padding:0px;
+			box-sizing:border-box;
+		}
+			ul{
+				height:80px;
+				width:70%;
+				background:red;
+				margin:0px auto;
+				list-style:none;				
+			}
+			 ul li{
+				float:left;
+				width:120px;
+				height:40px;
+				text-align:center;
+				background:crimson;
+				color:#fff;
+				margin:15px 18px;
+				font-size:18px;
+				border:2px solid #fff;
+				text-transform:uppercase;
+				border-radius:10px;
+				line-height:35px;
+				position:relative;
+				
+			 }
+			 ul li ul{
+				display:none;
+				height:auto;
+				width:140px;
+				position:absolute;
+				left:-10px;
+				top:38px;
+				
+				
+			 }
+			 ul li:hover ul{
+				display:block;
+			 }
+			 
+			 ul li ul li{
+				margin:10px 10px;
+
+			 }
+			 
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>Home</li>
+			<li>About</li>
+			<li>Contact</li>
+			<li>Blog
+				<ul>
+					<li>Blog1</li>
+					<li>Blog2</li>
+					<li>Blog3</li>
+					
+				</ul>
+			</li>
+			<li>Gallery</li>
+		</ul>
+	</body>
+</html>

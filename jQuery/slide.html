@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <style>
+        .slide{
+            height:300px;
+            width:500px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Slide Up</button>
+    <button id="btn1">Slide Down</button>
+    <button id="btn2" >Slide Toggle</button>
+    <button id="btn3" >Stop</button>
+    <div class="slide" id="slide"></div><br>
+    
+    <script src="js/jquery.js"></script> 
+    <script>
+        $(document).ready(function(){
+            $("#btn").mouseover(function(){
+               $("#slide").slideUp() ;
+            })
+            $("#btn1").mouseover(function(){
+               $("#slide").slideDown() ;
+            })
+            $("#btn2").mouseover(function(){
+               $("#slide").slideToggle(1000) ;
+            })
+            $("#btn3").mouseover(function(){
+               $("#slide").stop() ;
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+$primary_font:'Epilogue';
+$secondary_font:'Fredoka';
+$primary_color:#f3264c;
+$secondary_color:#ffd40d;
+$ternary_color:#b6b6b6;
+$forth_color:#ffffff;
+$primary_background:#f5f8fd;
+$secondary_background:#f3264c;
+$para_size:1em;
+$main_heading:3.8em;
+$small_heading:2.4em;
+$padding_top:2.4rem;
+$padding_bottom:2.4rem;
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $secondary_font;
+}
+
+.top-header{
+    min-height:50px;
+    width:100%;
+    background: $secondary_color;
+    font-family: $secondary_font;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .contact{
+        width:50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        @media (max-width:900px) {
+            .contact{
+                width:100% !important;
+                  
+            }
+        }
+        .mobile-icon{
+            background: $primary_color;
+            text-align: center;
+            height:30px;
+            width:30px;
+            line-height: 30px;
+            border-radius: 50%;
+            color:#ffffff;
+        } 
+        .contact-content{
+           padding-left: 10px; 
+        }         
+    }
+    .social{
+        width:25%;
+        display: flex;
+        justify-content: space-around;
+        a{
+            color:#000000;
+            text-align: center;
+        } 
+                  
+    }
+    
+
+    .login{
+        width:25%; 
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        .contact-content{
+            padding-left: 10px; 
+         }             
+    }
+   
+        
+}
+@media (max-width:900px){
+    .top-header{
+        flex-direction: column;
+    }
+    .top-header .contact{
+        width:100%;
+    }
+    .top-header .social{
+        width:100%;
+        justify-content: space-evenly;
+    }
+    .top-header .login{
+        width:100%;
+        
+    }
+}
+
+    
+   
+
+
+

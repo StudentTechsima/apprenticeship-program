@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Animation Division</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;				
+			}
+			
+			.div{
+				height:100px;
+				width:100px;
+				background:red;
+				animation:div 2s ease;
+				position:relative;
+			}
+			
+			@keyframes div{
+				0%{top:0%; left:0%; background:aqua;}
+				25%{top:0%; left:90%;background:crimson; }
+				50%{top:60%; right:0%;background:gold;}
+				75%{bottom:0%; right:90; background:silver;}
+				100%{bottom:90%; left:0%; background:teal;}
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div"></div>
+	</body>
+</html>

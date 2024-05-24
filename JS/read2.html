@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="images/alcohal-2.webp" id="im" height="300px" width="300px">
+    <input type="submit" id="btn" onclick="demo()" value="ON">
+    <button onclick="demo1()">AUTO</button>
+    <button onclick="demo2()">STOP</button>
+    <script>
+       function demo(){
+        var b=document.querySelector("#btn");
+        var img1=document.querySelector("#im");
+        if(b.value=="ON"){
+            b.value="OFF";
+            img1.src="images/alcohal-3.webp";
+        }
+        else{
+            b.value="ON";
+            img1.src="images/alcohal-2.webp";
+        }
+       } 
+       function demo1(){
+        a=window.setInterval(demo,1000);
+       }
+       function demo2(){
+        window.clearInterval(a);
+       }
+    </script>
+</body>
+</html>

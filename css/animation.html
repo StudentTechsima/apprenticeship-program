@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<style>
+			img{
+				height:100px;
+				width:100px;
+				display:block;
+			}
+			
+			.img1{
+				animation-name:run;
+				animation-duration:8s;
+				animation-iteration-count:3;
+				animation-delay:5s;
+				animation-direction:alternate;
+				position:relative;
+				animation-timing-function:linear;
+			}
+			.img2{
+				animation-name:run;
+				animation-duration:8s;
+				animation-iteration-count:3;
+				animation-direction:alternate;
+				position:relative;
+				animation-timing-function:ease;
+			}
+			.img3{
+				animation-name:run;
+				animation-duration:8s;
+				animation-iteration-count:3;
+				animation-direction:alternate;
+				position:relative;
+				animation-timing-function:ease-in;
+			}
+			.img4{
+				animation-name:run;
+				animation-duration:8s;
+				animation-iteration-count:3;
+				animation-direction:alternate;
+				position:relative;
+				animation-timing-function:ease-out;
+			}
+			.img5{
+				animation-name:run;
+				animation-duration:8s;
+				animation-iteration-count:3;
+				animation-direction:alternate;
+				position:relative;
+				animation-timing-function:ease-in-out;
+			}
+			.img6{
+				animation-name:run;
+				animation-duration:8s;
+				animation-iteration-count:3;
+				animation-direction:alternate;
+				position:relative;
+				animation-timing-function:cubic-bezier(1.0, .3, .8, 1);
+			}
+			@keyframes run{
+				from{left:0%;}
+				to{left:90%;}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<img src="images/b.gif" class="img1">
+		<img src="images/b.gif" class="img2">
+		<img src="images/b.gif" class="img3">
+		<img src="images/b.gif" class="img4">
+		<img src="images/b.gif" class="img5">
+		<img src="images/b.gif" class="img6">
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<style>
+			#box{
+				height:300px;
+				width:500px;
+				border:5px inset #f00;
+				margin:0px auto;
+			}
+			
+			#mimg{
+				width:100%;
+				height:100%;
+				object-fit:contain;
+			}
+			
+			#sbox{
+				height:200px;
+				width:23%;
+				border:2px outset #ff0;
+				display:inline-block;
+				margin:2em 0em;
+			}
+			#simg{
+				width:100%;
+				height:100%;
+				object-fit:contain;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="images/alcohal-2.webp" alt="this" id="mimg">
+		</div>
+		<div id="sbox" onclick="demo(this)"><img src="images/alcohal-3.webp" id="simg"></div>
+		<div id="sbox" onclick="demo(this)"><img src="images/alcohal-4.webp" id="simg"></div>
+		<div id="sbox" onclick="demo(this)"><img src="images/alcohal-5.webp" id="simg"></div>
+		<div id="sbox" onclick="demo(this)"><img src="images/alcohal-2.webp" id="simg"></div>
+		<script>
+			function demo(x){			
+				let im=document.getElementById("box").innerHTML;
+				document.getElementById("box").innerHTML=x.innerHTML;
+				x.innerHTML=im;
+			}
+		</script>
+	</body>
+</html>

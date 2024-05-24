@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #s{
+            height:200px;
+            width:200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="s">
+        
+    </div>
+    <button type="submit" onclick="change()">ChangeStyle</button>
+    <script>
+        function change(){
+            var a=document.getElementById("s");
+            if(a.style.background=="red"){
+                a.style.background="green";
+            }else{
+                a.style.background="red"; 
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height:500px;
+            width:27%;
+            border:5px groove teal;
+            margin:50px auto;
+            padding:2%;
+            box-sizing: border-box;
+            
+        }
+        #t1{
+            height:45px;
+            width:100%;
+            border-radius:5px;
+            text-align: right;
+            font-size:40px;
+        }
+        button{
+            height:70px;
+            width:70px;
+            border-radius:50%;
+            font-size:25px;
+            background:teal;
+            color:white;
+            margin:1%;
+            border:none;
+        }
+    </style>
+    <script>
+        function f1(x){
+                document.getElementById("t1").value+=x.innerText;
+            }
+            function f2(){
+                var r=document.getElementById("t1").value;
+                var a=eval(r);
+                document.getElementById("t1").value=a;
+            }
+            function f3()
+            {
+                document.getElementById("t1").value=" ";
+            }
+            function f4()
+            {
+                var dd=document.getElementById("t1").value;
+                var n="";
+                for(i=0;i<dd.length-1;i++)
+                {
+                    n=n+dd[i];
+                }
+                document.getElementById("t1").value=n;
+            }
+        
+    </script>
+</head>
+<body>
+    <div id="box">
+        <input type="text" id="t1" placeholder="0"><br><br>
+        <button onclick="f3(this)">Clr</button>
+        <button onclick="f1(this)">%</button>
+        <button onclick="f4(this)">DEL</button>
+        <button onclick="f1(this)">/</button><br>
+        <button onclick="f1(this)">7</button>
+        <button onclick="f1(this)">8</button>
+        <button onclick="f1(this)">9</button>
+        <button onclick="f1(this)">*</button><br>
+        <button onclick="f1(this)">4</button>
+        <button onclick="f1(this)">5</button>
+        <button onclick="f1(this)">6</button>
+        <button onclick="f1(this)">-</button><br>
+        <button onclick="f1(this)">1</button>
+        <button onclick="f1(this)">2</button>
+        <button onclick="f1(this)">3</button>
+        <button onclick="f1(this)">+</button><br>
+        <button onclick="f1(this)">00</button>
+        <button onclick="f1(this)">0</button>
+        <button onclick="f1(this)">.</button>
+        <button onclick="f2(this)">=</button><br>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <script>
+        var student=["Rahul","Dinesh","Kamal","Vijay","Rahul"];
+        function findDValue(array){
+            return array.filter(function (value, index, self){
+                return self.indexOf(value)!=="index";
+            })
+        }
+        var duplicateValue =findDValue(student);
+        document.write("Dulicate values:",duplicateValue);
+    </script>
+  </body>
+</html>

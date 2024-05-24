@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:300px;
+            width:300px;
+            float:left;
+            background-color: rgb(231, 14, 32);
+            margin-left: 20px;
+        }
+        button{
+            padding:  20px 40px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div><br>   
+    <button id="btn2">fadeOut</button>
+    <button id="btn1">fadeIn</button>
+    <button id="btn3">fadeToggle</button>
+    <button id="btn4">fadeTo</button>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".div").fadeIn() 
+                $(".div1").fadeIn(2000) 
+                $(".div2").fadeIn("slow")  
+                $(".div3").fadeIn("fast")                  
+            })
+            $("#btn2").click(function(){
+                $(".div").fadeOut()  
+                $(".div1").fadeOut(1000)
+                $(".div2").fadeOut("slow")
+                $(".div3").fadeOut("fast")              
+            })
+            $("#btn3").click(function(){
+                $(".div").fadeToggle()  
+                $(".div1").fadeToggle(1000)
+                $(".div2").fadeToggle("slow")
+                $(".div3").fadeToggle("fast")              
+            })
+            $("#btn4").click(function(){
+                $(".div").fadeTo(2000,"0.2")  
+                $(".div1").fadeTo(1000,"0.6")
+                $(".div2").fadeTo("slow",".1")
+                $(".div3").fadeTo("fast",".3")              
+            })
+
+        })
+    </script>        
+
+</body>
+</html>

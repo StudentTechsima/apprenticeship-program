@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <button type="submit" id="btn" disabled >Change</button>
+    <script>
+        let c=document.getElementById("check");
+        let b=document.getElementById("btn");
+        c.onchange = function(){
+            if(c.checked==true){
+                b.disabled=false;
+            }
+            else{
+                b.disabled=true; 
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Transform Property</title>
+		<style>
+			.vinay{
+				height:300px;
+				width:300px;
+				background:yellow;
+				margin:100px auto;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				color:#fff;
+				
+				perspective:500px;
+				perspective-origin:left;
+				
+				
+			}
+			.inner{
+				height:200px;
+				width:200px;
+				transition:all ease 1s;
+				background:red;
+			}
+			
+			.inner:hover{
+				transform:rotateX(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="vinay">
+			<div class="inner">
+				Techsima
+			</div> 
+		</div>
+	</body>
+</html>

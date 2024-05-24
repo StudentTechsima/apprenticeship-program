@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <!-- <input type="text" id="txt1" onkeypress="demo()"/> -->
+    <input type="text" id="txt1" onkeyup="demo()"/>
+    <p id="msg"></p>
+    <script>
+        function demo(){
+            let x=document.getElementById("txt1");
+            var m=document.getElementById("msg");
+            if(x.value.length==5){
+                m.innerText="Valid Pincode";
+                m.style.color="green";
+                x.style.border="2px solid green";
+            }else{
+                m.innerText="Invalid Pincode";
+                m.style.color="red";
+                x.style.border="2px solid red";
+            }
+        }
+    </script>
+  </body>
+</html>

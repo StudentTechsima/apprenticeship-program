@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <select onchange="demo()" id="ddl">
+        <option>HTML</option>
+        <option>react</option>
+        <option>jquery</option>
+        <option>js</option>
+    </select>
+    <div id="h"></div>
+    <script>
+        function demo(){
+            var x=document.getElementById("ddl").value;
+            document.getElementById("h").innerText=x;
+        }
+    </script>
+  </body>
+</html>

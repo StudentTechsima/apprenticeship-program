@@ -1,0 +1,20 @@
+<html>
+	<head></head>
+	<body>
+		<img src="images/off.png" id="im" height="400" width="400">
+		<input type="submit" id="btn" onclick="demo()" value="ON">
+		<script>
+			function demo(){
+				var image=document.getElementById("im");
+				var b=document.getElementById("btn");
+				if(b.value=="ON"){
+					image.src="images/on.png";
+					b.value="OFF";
+				}else{
+					image.src="images/off.png";
+					b.value="ON";
+				}
+			}
+		</script>
+	</body>
+</html>

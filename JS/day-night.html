@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    #toggleBtn {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Day mode styles */
+    .day-mode {
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Night mode styles */
+    .night-mode {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+  <title>Day Night Mode Toggle</title>
+</head>
+<body class="day-mode">
+
+<div class="container">
+  <h1>Day-Night Mode Toggle</h1>
+  <label for="toggleBtn">Toggle Mode:</label>
+  <button id="toggleBtn" onclick="toggleMode()">Switch</button>
+</div>
+
+<script>
+  // Function to toggle between day and night mode
+  function toggleMode() {
+    const body = document.body;
+    body.classList.toggle('night-mode');
+  }
+</script>
+
+</body>
+</html>

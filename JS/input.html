@@ -1,0 +1,23 @@
+<html>
+	<head></head>
+	<body>
+		Num1 : <input type="text" id="txt1"><br><br>
+		Num2 : <input type="text" id="txt2"><br><br>
+		<input type="submit" value="Add Result" id="btn"  ondblclick="demo()">
+		
+		<h1 id="result"></h1>
+		
+		<script>
+			function demo(){
+				var v1=document.getElementById("txt1").value;// get value in input string type //getter
+				var v2=document.getElementById("txt2").value;
+				//alert(v1+ typeof(v1));
+				//alert(v2 + typeof(v2));
+				var res=Number(v1)+Number(v2);
+				//alert(res);
+				var print=document.getElementById("result");//setter
+				print.innerText="This Addition result is :"+res;
+			}
+		</script>
+	</body>
+</html>

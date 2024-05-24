@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<style>
+			img{
+				border:2px solid red;
+				height:300px;
+				width:300px;
+				padding:10px;
+				box-shadow:0px 0px 20px 2px #000 inset;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="images/alcohal-2.webp" id="im1">
+		<img src="images/alcohal-3.webp" id="im2"><br><br>
+		<button type="submit" onmouseleave="demo()" id="btn">SWAP IMAGE</button>
+		<script>
+		function demo(){
+			var img1=document.getElementById("im1");
+			var img2=document.getElementById("im2");
+			var swap1=img1.src			
+			var swap2=img2.src;			
+			img2.src=swap1;
+			img1.src=swap2;
+			}
+		</script>
+		</body>
+</html>

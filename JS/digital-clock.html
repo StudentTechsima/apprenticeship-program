@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL CLOCK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+           
+        }
+        body{
+            height: 100vh;
+            width:100vw;
+            background-color: rgb(31, 163, 163);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        #clock{
+            height:60vmin;
+            width:60vmin;
+            border-radius: 1.5vmin;
+            box-shadow: 0 0 3rem 1rem #413434 inset;
+            background-color: floralwhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6vmin;
+            font-weight: bold;
+            padding: 10vmin;
+            color:#f00;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;          
+        }
+        h1{
+            color:#fff;
+            font-size: 10vmin;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>DIGITAL WATCH</h1>
+    <div id="clock">00  :  00  :  00  AM</div>
+    <script>
+        function digitalClock(){
+            let timestamp=new Date(); 
+            let hour=timestamp.getHours();
+            let minut=timestamp.getMinutes();
+            let sec=timestamp.getSeconds();
+            let session="AM";
+            session=hour<12 ? "AM":"PM";
+            hour=hour<10?"0"+hour:hour;
+            minut=minut<10?"0"+minut:minut;
+            sec=sec<10?"0"+sec:sec;
+            let time=`${hour}: ${minut} : ${sec}  ${session}`;
+            console.log(time);
+            document.getElementById("clock").innerText=time;
+        }
+        window.setInterval(digitalClock,1000);
+        
+    </script>
+</body>
+</html>

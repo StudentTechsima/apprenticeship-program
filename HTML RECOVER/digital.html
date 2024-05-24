@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align:center;
+            color:red;
+        }
+        #d1{
+            height:400px;
+            width:400px;
+            border:10px solid teal;
+            margin:0px auto;
+            border-radius:50%;
+            font-size:80px;
+            font-weight:bold;
+            color:teal;
+            text-align: center;
+            line-height: 400px;
+        }
+    </style>
+    <script>
+        var hh=0,mm=0,i=0;
+        function f1(){
+            i++;
+            if(i>9)
+            {
+                return i;
+            }
+            else{
+                return '0'+i;
+            }
+        }
+        //create function
+        function f2()
+        {
+            var x=f1();
+            //alert(x);
+            document.getElementById("ss").innerText=x;
+            if(x>59)
+            {
+                i=0;
+                mm++;
+                //alert(mm);
+                    if(mm<10)
+                    document.getElementById("sm").innerText='0'+mm;
+                    else
+                    document.getElementById("sm").innerText=mm;
+            }
+                if(mm>59)
+                {
+                    hh++;
+                    mm=0;
+                    if(hh<10)
+                    document.getElementById("sh").innerText='0'+hh;
+                    else
+                    document.getElementById("sh").innerText=hh;
+                }
+                if(hh==12){
+                    hh=0;
+                    mm=0;
+                    i=0;
+                    document.getElementById("sh").innerText='0'+hh;
+                    document.getElementById("sm").innerText='0'+mm;
+                    document.getElementById("ss").innerText='0'+i;
+
+                }
+                window.setTimeout(f2,1000)
+
+            }
+        window.onload=f2;
+
+    </script>
+</head>
+<body>
+    <!-- <h1>Welcome to Techsima Solution Pvt.Ltd</h1> -->
+    <hr/>
+    <div id="d1">
+       <span id="sh">00</span>:
+       <span id="sm">00</span>:
+       <span id="ss">00</span>
+    </div>
+</body>
+</script>

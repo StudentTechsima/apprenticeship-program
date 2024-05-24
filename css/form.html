@@ -1,0 +1,134 @@
+<html>
+	<head>
+		<title>Form Tag & Property </title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+			}
+			::placeholder{
+				color:red;
+				padding-left:20px;
+			}
+			h1{
+				text-align:center;
+				color:#00f;
+			}
+			
+			.form{
+				min-height:300px;
+				width:50%;
+				margin:40px auto;
+				border:10px inset #ff0;
+				padding:.5rem 2rem;
+			}
+			
+			fieldset{
+				padding:2rem;
+			}
+			.input {			   
+				height: 30px;
+				width: 100%;
+				margin:.6rem 0rem;
+				padding-left:.5rem;
+			}
+			
+			textarea{
+				height:100px;
+				width: 100%;
+				resize:none;
+				margin:.6rem 0rem;
+			}
+			
+			button{
+				height:30px;
+				width:100px;
+				margin:1rem 0rem;
+				background:#0ff;
+				font-size:20px;
+				border-radius:40px;
+				border:2px inset #0ff;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="form">
+			<h1> Register Form</h1>
+			<form action="" method="GET" enctype="multipart/form-data" autocomplete="OFF">
+			<!--fill Your Personal Information Data-->
+				<fieldset>
+				<input type="hidden">
+					<legend>Personal Info</legend>
+					<label for="eid">Enroll Id</label>
+					<input type="text" value="E201756000122" id="eid" class="input" readonly disabled>
+					<label for="n" class="label">Name <span style="color:#f00;">*</span></label>
+					<input type="text" id="n" name="name" placeholder="Enter Your Name" required class="input">
+					<label for="fn" class="label">Father Name</label>
+					<input type="text" placeholder="enter your father name" id="fn" name="fname" class="input">
+					<label for="pn" class="label">Phone Number</label>
+					<input type="number" placeholder="+91 - 898582592" id="pn" name="num" class="input">
+					
+					<label  class="label">Email</label>
+					<input type="email"  class="input">
+					<label  class="label">password</label>
+					<input type="password"  class="input">
+					
+					<label  class="label">DOB</label>
+					<input type="date"  class="input">
+					
+					<label  class="label">Time & Date</label>
+					<input type="datetime-local"  class="input">
+					
+					<label  class="label">Week</label>
+					<input type="week"  class="input">
+					
+					<label  class="label">Month</label>
+					<input type="month"  class="input">
+					
+					<label  class="label">Color</label>
+					<input type="color"  class="input">
+					<label  class="label">Range</label>
+					<input type="range"  class="input">
+					<label  class="label">Search</label>
+					<input type="search"  class="input">
+					<label  class="label">Gendar</label><br><br>
+					<input type="radio" checked name="gen" > Male
+					<input type="radio" name="gen"> Female
+					<input type="radio" name="gen"> Other<br><br>
+					
+					<label class="label">Hobbies</label><br><br>
+					<input type="checkbox" checked >Dancing
+					<input type="checkbox" > Reading
+					<input type="checkbox"> Playing
+				</fieldset>
+				<!-- Fill Your address Data -->
+				<fieldset>
+					<label>City</label>
+					<select class="input">
+						<optgroup label="Ayodhya">
+							<option selected>Darshan Nagar</option>
+							<option>Devkali</option>
+							<option>NAKA</option>
+						</optgroup>
+						
+						<optgroup label="Akbarpur">
+							<option selected>Darshan Nagar</option>
+							<option>Devkali</option>
+							<option>NAKA</option>
+						</optgroup>
+					</select>
+					<label  class="label">Photo</label>
+					<input type="file" multiple class="input">
+					<legend>Current Add</legend>
+					<label for="add">Address</label>
+					<textarea id="add" placeholder="Enter your Current Add..." rows="10" cols="80"></textarea>
+				</fieldset>	
+				<button type="submit">Save</button>
+				<button type="reset">Clear</button>
+			</form>
+		</div>
+	</body>
+</html>

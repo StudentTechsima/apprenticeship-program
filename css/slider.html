@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Animation Division</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;				
+			}
+			
+			.div{
+				height:300px;
+				width:700px;
+				background:url('images/s3.jpg');
+				background-repeat:no-repeat;
+				background-position:center;
+				background-size:cover;
+				animation:slider 10s ease infinite alternate ;
+				position:relative;
+			}
+			
+			@keyframes slider{
+				0%{background:url('images/s1.jpg');background-size:cover;}
+				25%{background:url('images/s2.jpg');background-size:cover;}
+				50%{background:url('images/s3.jpg'); background-size:cover;}
+				75%{background:url('images/ss.jpg'); background-size:cover;}
+				100%{background:url('images/4.png');background-size:cover;}
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div"></div>
+	</body>
+</html>

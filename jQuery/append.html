@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="app">APPEND</button>
+    <span id="p"></span>
+    <button id="app1">Prepend</button>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#app").click(function(){
+                $("#p").append("This is append function");
+            })
+            $("#app1").click(function(){
+                $("#p").prepend("This is append function");
+            })
+        });
+    </script>
+</body>
+</html>

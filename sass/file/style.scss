@@ -1,0 +1,44 @@
+
+$primary_color:#ff0;
+$bg-primary:rgb(112, 36, 36);
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+// Nesting concept start
+    .container{
+        height:300px;
+        width:100vw;
+        border:2px solid #000;
+        h1{
+            color:$primary_color;
+            background-color:$bg-primary;
+        }
+        p{
+            color:$primary_color;
+            background-color: $bg-primary;
+            &:hover{
+                color:orange;
+            }
+        }
+        
+    }
+    .container1{
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .inner{
+            height:400px;
+            width:400px;
+            border-radius:50%;
+            background-color: $bg-primary;
+            &:hover{
+                box-shadow: -15px -15px 10px 10px  #f1f1f1, 15px 15px 10px 5px #000,10px 10px 10px 5px #fe3f3f;
+            }
+        }
+
+    }
+// Nesting concept end

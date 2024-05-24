@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:200px;
+            width:300px;
+            border:2px solid #000;
+            background-color: navy;
+        }
+        .box{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button id="btn">addclass</button>
+    <button id="btn1">removeclass</button>
+    <button id="btn2">toggleclass</button>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("div").addClass("box");
+            })
+            $("#btn1").click(function(){
+                $("div").removeClass("box");
+            })
+            $("#btn2").click(function(){
+                $("div").toggleClass("box");
+            })
+        })
+    </script>
+</body>
+</html>

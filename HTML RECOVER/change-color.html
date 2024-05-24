@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <button onclick="demo()">Change Me</button>
+    <script>
+        function demo(){
+            var lan=["PHP","PYTHON","RUBY","GO","REST"];
+           res="";
+            for(var i=0; i<lan.length; i++){
+                var res=res+lan[i];
+            }
+            
+           document.getElementById("para").innerText=res;
+        }
+    </script>
+</body>
+</html>

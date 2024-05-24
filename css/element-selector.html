@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Pseudo Element Selector</title>
+		<style>
+			.heading{
+				position:relative;
+				text-align:center;
+			}
+			.heading:after {
+				content: "";
+				height: 3px;
+				width: 80px;
+				background: red;
+				position: absolute;
+				top: 35px;
+				left: 520px;
+				transform:scale(0);
+				transition:transform 2s;
+				transform-origin:right;
+			}
+			.heading:hover::after {
+				transform:scale(1);
+				transform-origin:left;
+			}
+			.heading:before {
+				content: "";
+				height: 3px;
+				width: 80px;
+				background: red;
+				position: absolute;
+				top: 35px;
+				right: 520px;
+				transform:scale(0);
+				transition:transform 2s;
+				transform-origin:left;
+			}
+			.heading:hover::before {
+				transform:scale(1);
+				transform-origin:right;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1 class="heading">Solution</h1>		
+	</body>
+</html>

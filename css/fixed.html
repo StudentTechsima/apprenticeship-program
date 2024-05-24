@@ -1,0 +1,30 @@
+<script>
+            $(window).scroll(function(){
+                if($(this).scrollTop()>70)
+                {       
+                   $(".menu").addClass('a');
+                }
+                else
+                {
+                   $(".menu").removeClass('a'); 
+                }
+            })
+        </script>
+        <style>
+            .menu.a{position:fixed;top:0px;z-index:10;background:#203a72;color:white;transition: all ease 1s; width: 100%;  }
+			.sticky{
+    position: fixed;
+    width:100%;
+    z-index: 2;
+    animation: sticky 2s ease-in-out;
+}
+@keyframes sticky {    
+
+0% {
+    top: -100px;
+}
+100% {
+    top: 0px;
+}
+
+}

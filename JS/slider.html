@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/alcohal-2.webp" id="im1">
+    <button onclick="prev()">prev</button>
+    <button onclick="next()">Next</button>
+    <script>
+        let arr = ["alcohal-5.webp", "alcohal-2.webp", "alcohal-3.webp", "alcohal-4.webp"];
+        let item = 0;
+        let img1 = document.getElementById("im1");
+
+        const slideImage = () => {
+            img1.src = "images/" + arr[item];
+        };
+
+        const next = () => {
+            item = (item + 1) % arr.length;
+            slideImage();
+        };
+
+        const prev = () => {
+            item = (item - 1 + arr.length) % arr.length;
+            slideImage();
+        };
+
+        // Initial slide
+        slideImage();
+    </script>
+</body>
+</html>

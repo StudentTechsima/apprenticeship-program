@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <style>
+        div{
+        display:none;
+        }
+    </style>
+  </head>
+  <body>
+    <form>
+        
+    
+    <div id="sign_up" >
+        <h1>Sign UP</h1>
+        <input type="text" placeholder="first name.." id="input">
+        <input type="text" placeholder="last name.." id="input">
+       
+    </div>
+    <div id="sign_in">
+        <h1>Sign In</h1>
+        <input type="text" placeholder="first name.." id="input">
+        <input type="text" placeholder="last name.." id="input">        
+       
+    </div>
+    <input type="submit" value="signup" id="btn" oncontextmenu="demo()">
+</form>
+    <script>
+        function  demo(){
+            var box1=document.getElementById("sign_up");
+            var box2=document.getElementById("sign_in"); 
+            var b=document.getElementById("btn");  
+            if(b.value=="signup"){
+                b.value="signin";
+               box1.style.display="block";
+               box2.style.display="none";
+            }
+            else{
+                b.value="signup";
+                box1.style.display="none";
+                box2.style.display="block";
+            }
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            letter-spacing: 1px;
+        }
+        body{
+            background: #0cf6f6;
+            display: flex;
+        }
+        h1{
+            text-align: center;
+            color: teal;
+            text-decoration: underline 3px teal;
+        }
+        .form-outer{
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 40px;
+            background: rgb(233, 231, 231);
+            border-radius: 10px;
+            box-shadow: -1px -1px 30px rgba(0, 0, 0, .1), 1px 1px 30px rgba(0, 0, 0, .1);
+            color: teal;
+            flex-basis: 500px;
+        }
+        .input-name-password{
+            width: 100%;
+            padding: 10px 15px;
+            outline: none;
+            border:.9px solid rgba(147, 145, 145, 0.7);
+            font-size: 16px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: teal;
+        }
+        #send-btn{
+            width: fit-content;
+            padding: 10px 40px;
+            background: teal;
+            border-radius: 20px;
+            outline: none;
+            font-size: large;
+            border: none;
+            color: white;
+        }
+        .captcha-code{
+            display: flex;
+            justify-content: space-between;
+            padding-inline: 10px;
+            align-items: center;
+        }
+        .captcha{
+            background-color: rgb(40, 40, 226);
+            text-decoration: line-through 2px white;
+            color: white;
+            font-size: x-large;
+            padding: 2px;
+            font-style: italic;
+        }
+        .load{
+            padding: 7px;
+            background: teal;
+            border-radius: 50%;
+            font-size: x-large;
+            color: white;
+        }
+        label{
+            font-size: large;
+            padding-block: 4px;
+            display: inline-block;
+        }
+        .password{
+            position: relative;
+        }
+        .eye{
+            position: absolute;
+            top: 50%;
+            right: 3%;
+            font-size: x-large;
+            width: 30px;
+            background-color: #0cf6f6;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body onload="leaveWebsites()">
+    <form action="" class="form-outer">
+        <h1>Login Form</h1>
+        <div>
+            <label for="name">User Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter User Name" class="input-name-password">
+        </div>
+        <div class="password">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter the password"class="eye-position input-name-password" id="password">
+            <img src="https://cdn-icons-png.flaticon.com/128/10812/10812267.png" class="eye" onclick="pass()" id="pass-icon">
+        </div>
+        <div class="captcha-code">
+            <span class="captcha" id="genCaptcha"></span>
+            <i onclick="refCaptcha()" class="load fa-solid fa-rotate"></i>
+        </div>
+        <div>
+            <input type="text" id="matchVal" class="input-name-password">
+			<p id="message"></p>
+        </div>
+        <input type="submit" value="Send" id="send-btn" onclick="submitData()">
+    </form>
+    <script src="https://kit.fontawesome.com/677dfc168a.js" crossorigin="anonymous"></script>
+    <script>
+        var a;
+        function pass(){
+            if(a==1){
+                document.getElementById('password').type='password';
+                document.getElementById('pass-icon').src='https://cdn-icons-png.flaticon.com/128/10812/10812267.png';
+                a=0;
+            }
+            else{
+                document.getElementById('password').type='text';
+                document.getElementById('pass-icon').src='https://cdn-icons-png.flaticon.com/128/2874/2874802.png';
+                a=1;
+            }
+        }
+        
+        function captcha(){
+            const char="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let charText=" ";
+            for(let i=0; i<6; i++){
+                charText=charText+char.charAt(Math.floor(Math.random()*char.length));
+            }
+            document.getElementById("genCaptcha").textContent=charText;
+        }
+        captcha();
+
+        function refCaptcha(){
+            captcha(); 
+            document.getElementById("matchVal").value=" ";
+        }
+
+		function submitData(){
+			let matchVal=document.querySelector("#matchVal").value;
+			let genCaptcha=document.querySelector("#genCaptcha").innerText;
+			let message=document.querySelector("#message").innerText;
+			if(matchVal.value==genCaptcha.innerText){
+				var check=message.innnerText="CAPTCHA verified successfully";
+                alert(check);
+
+			}else{
+				message.innnerText="Not CAPTCHA verified successfully";
+			}
+		}
+    </script>
+</body>
+</html>
